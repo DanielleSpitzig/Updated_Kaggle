@@ -247,8 +247,8 @@ def NN_valid(train, test, y_train, y_test, opt="sgd"):
     for batch in batches:
         for n in num_neur:
             #Using batch and neurons get 2 and 3 layer
-            model1 = layer2(train, y_train, n=n, batch=batch)
-            model2 = layer3(train, y_train, n=n, batch=batch)
+            model1 = layer2(train, y_train, n=n, batch=batch, opt=opt)
+            model2 = layer3(train, y_train, n=n, batch=batch, opt=opt)
             pred_2 = model1.predict(test, batch_size = batch)
             pred_3 = model2.predict(test, batch_size = batch)
             lay2_AUC = roc_auc_score(y_test, pred_2)
