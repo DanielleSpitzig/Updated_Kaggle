@@ -156,6 +156,7 @@ set_country_codes(test_data)
 train_features = train_data.drop(labels=['id'], axis = 1)
 test_features = test_data.drop(labels=['id'], axis = 1)
 test_id = pd.DataFrame(test_data['id'])
+test_id.to_csv("test_id.csv", index=False)
 
 ## Imputations Using SkLearn SimpleImputer function##
 #Fill ordinals 1 with mode
