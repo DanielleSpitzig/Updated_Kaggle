@@ -92,7 +92,7 @@ def comp_SVM(X_train, X_test, y_train, y_test):
     AUC_SVM.append(linSVM(X_train, X_test, y_train, y_test, kern="linear"))
     AUC_SVM.append(linSVM(X_train, X_test, y_train, y_test))
     AUC_SVM.append(linSVM(X_train, X_test, y_train, y_test, kern="poly"))
-    AUC_SVM.append(linSVM(X_train, X_test, y_train, y_test, kern="sigmoidal"))
+    AUC_SVM.append(linSVM(X_train, X_test, y_train, y_test, kern="sigmoid"))
     #Get max and position of max to find best model
     best = np.max(AUC_SVM)
     best_index = np.argmax(AUC_SVM)
